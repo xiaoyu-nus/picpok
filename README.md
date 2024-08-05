@@ -1,4 +1,5 @@
-# PicPok
+# WicWok
+
 A recorder app with lyrics
 
 # Expo Router Example
