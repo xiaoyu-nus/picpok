@@ -1,6 +1,8 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TabBar from "components/TabBar";
 import { Tabs } from "expo-router";
+import { View } from "react-native";
+import { ThemeProvider } from "theme/themeContext";
 
 export default function TabLayout() {
   return (
@@ -20,9 +22,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="songs"
+        name="recent"
         options={{
-          title: "Songs",
+          title: "Recent",
           headerShown: false,
         }}
       />
