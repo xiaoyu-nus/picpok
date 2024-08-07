@@ -20,7 +20,7 @@ const TabBar = ({ state, descriptors, navigation }) => {
         name="music-box-multiple-outline"
         size={iconSize}
         color={
-          props.isFocused ? fullConfig.theme.colors[theme] : colors.neutral[500]
+          props.isFocused ? fullConfig.theme.colors[theme] : colors.stone[400]
         }
         {...props}
       />
@@ -30,7 +30,7 @@ const TabBar = ({ state, descriptors, navigation }) => {
         name="account-music-outline"
         size={iconSize}
         color={
-          props.isFocused ? fullConfig.theme.colors[theme] : colors.neutral[500]
+          props.isFocused ? fullConfig.theme.colors[theme] : colors.stone[400]
         }
         {...props}
       />
@@ -40,15 +40,15 @@ const TabBar = ({ state, descriptors, navigation }) => {
         name="access-time"
         size={iconSize}
         color={
-          props.isFocused ? fullConfig.theme.colors[theme] : colors.neutral[500]
+          props.isFocused ? fullConfig.theme.colors[theme] : colors.stone[400]
         }
         {...props}
       />
     ),
   };
   return (
-    <View className="bg-neutral-700">
-      <View className="flex flex-row bg-neutral-700 align-middle py-3 px-4 justify-between mx-2">
+    <View className="bg-stone-600">
+      <View className="flex flex-row bg-stone-600 align-middle py-2 px-4 justify-between mx-2">
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
           const label =
@@ -97,9 +97,14 @@ const TabBar = ({ state, descriptors, navigation }) => {
                   })}
                 </View>
                 <Text
+                  //@ts-expect-error not recognized
+                  style={{
+                    color: isFocused
+                      ? fullConfig.theme.colors[theme]
+                      : colors.stone[400],
+                  }}
                   className={
-                    "text-center text-xs " +
-                    (isFocused ? `text-${theme}` : "text-neutral-500")
+                    "text-center text-xs " + (isFocused ? `font-medium` : "")
                   }
                 >
                   {label}

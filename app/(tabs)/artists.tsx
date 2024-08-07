@@ -7,8 +7,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
   return (
-    <SafeAreaView className="bg-black">
-      <View className="flex h-full bg-neutral-600">
+    <SafeAreaView className="bg-stone-700">
+      <View className="flex h-full bg-stone-600">
         <Text>Hello</Text>
       </View>
     </SafeAreaView>

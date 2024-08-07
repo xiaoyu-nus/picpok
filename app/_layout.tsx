@@ -5,12 +5,15 @@ import colors from "tailwindcss/colors";
 import { StatusBar } from "expo-status-bar";
 
 export default function Layout() {
-  NavigationBar.setBackgroundColorAsync("black");
+  NavigationBar.setBackgroundColorAsync(colors.stone[600]);
   return (
     <ThemeProvider>
       <StatusBar style="light" />
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(tabs)"
+          options={{ headerShown: false }}
+        ></Stack.Screen>
       </Stack>
     </ThemeProvider>
   );

@@ -1,7 +1,7 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import TabBar from "components/TabBar";
 import { Tabs } from "expo-router";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { ThemeProvider } from "theme/themeContext";
 
 export default function TabLayout() {
@@ -11,7 +11,7 @@ export default function TabLayout() {
         name="index"
         options={{
           headerShown: false,
-          title: "Collections",
+          title: "Space",
         }}
       />
       <Tabs.Screen
