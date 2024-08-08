@@ -1,4 +1,5 @@
 import { AntDesign, Entypo, FontAwesome5 } from "@expo/vector-icons";
+import Header from "components/Header";
 import { Stack, Tabs, useRouter } from "expo-router";
 import React from "react";
 import { View, Text, FlatList } from "react-native";
@@ -10,21 +11,7 @@ interface Collection {
   name: string;
 }
 
-const Header = () => {
-  return (
-    <View className="h-10 bg-stone-600 border-stone-700 px-4">
-      <View className="flex flex-row justify-end h-full align-center items-center">
-        <TouchableOpacity className="">
-          <Text>
-            <Entypo name="plus" size={24} color={colors.stone[700]} />
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-};
-
-const Home = () => {
+const Index = () => {
   const collections: Collection[] = [
     {
       name: "华语女",
@@ -38,7 +25,15 @@ const Home = () => {
   ];
   return (
     <SafeAreaView className="bg-stone-600">
-      <Header></Header>
+      <Header>
+        <View className="flex flex-row justify-end h-full align-center items-center">
+          <TouchableOpacity className="">
+            <Text>
+              <Entypo name="plus" size={24} color={colors.stone[700]} />
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </Header>
       <View className="flex h-full bg-stone-600 ">
         <View className="flex flex-col space-y-6 justify-center items-center w-full ">
           <FlatList
@@ -62,4 +57,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Index;

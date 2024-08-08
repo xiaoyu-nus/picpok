@@ -1,8 +1,4 @@
-import {
-  Ionicons,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "tailwind.config.js";
 import colors from "tailwindcss/colors";
